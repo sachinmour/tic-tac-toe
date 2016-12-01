@@ -1,0 +1,18 @@
+/node_modules
+/archived
+npm-debug.log
+
+# IntelliJ
+*.iml
+/.idea
+/.env
+/.floo
+/.flooignore
+/app/adminlte
+/uploads
+/data
+/data2.csv
+/data.csv
+/smalldata.csv
+/termData.csv
+/.DS_Store

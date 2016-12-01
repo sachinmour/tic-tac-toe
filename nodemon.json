@@ -1,0 +1,11 @@
+{
+  "verbose": true,
+  "ignore": [
+  	"/app/client/src/components",
+  	"/app/client/src/reducers",
+	"/app/client/src/actions",
+  	"/adminlte",
+  	"/uploads",
+  	"/test"
+  ]
+}
