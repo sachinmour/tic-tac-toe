@@ -13,10 +13,9 @@ import store from './store';
 require('../public/style/main.scss');
 
 ReactDOM.render(
-    <Provider store={ store }>
+    <Provider store={store}>
         <Router history={browserHistory}>
-            <Route path='/*' component={ App }>
-            </Route>
+            <Route path='/*' component={App} />
         </Router>
     </Provider>
     , document.querySelector('#root'));

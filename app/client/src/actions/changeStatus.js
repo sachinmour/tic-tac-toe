@@ -1,12 +1,8 @@
-import {CHANGE_STATUS} from './types';
+import { CHANGE_STATUS } from './types';
 
-const changeStatus = (status) => (
-    (dispatch) => (
-        dispatch({
-            type: CHANGE_STATUS,
-            status
-        })
-    )
-);
+const changeStatus = (status) => ({
+    type: CHANGE_STATUS,
+    status
+});
 
 export default changeStatus;

@@ -1,4 +1,5 @@
 import { CHANGE_STATUS } from '../actions/types';
+
 const defaultState = 'newGame';
 
 export default (state = defaultState, action) => {

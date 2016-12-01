@@ -1,0 +1,111 @@
+// variables
+$x-icon: '\f00d';
+$o-icon: '\f10c';
+
+$x-color: #dc685a;
+$o-color: #ecaf4f;
+$hover-color: #3d4250;
+
+// classes
+.icon {
+  font-family: FontAwesome;
+  font-size: 70px;
+  width: 100%;
+  z-index: 1;
+  height: 100%;
+  display: flex;
+  cursor: pointer;
+  color: darken(white, 40%);
+  border-radius: 15px;
+  align-items: center;
+  justify-content: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+body {
+  background-color: white;
+}
+
+div {
+  display: flex;
+  box-sizing: border-box;
+}
+
+#root {
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.boxWrapper {
+  max-width: 500px;
+  position: relative;
+  flex-wrap: wrap;
+  &--box {
+    width: 140px;
+    height: 140px;
+    border-radius: 15px;
+    background-color: #78bec5;
+    margin: 10px;
+  }
+
+  &--x-marker:hover {
+    &:before {
+      @extend .icon;
+      content: $x-icon;
+      background-color: $hover-color;
+    }
+  }
+
+  &--o-marker:hover {
+    &:before {
+      @extend .icon;
+      content: $o-icon;
+      background-color: $hover-color;
+    }
+  }
+
+  &--x-set-marker:before {
+    @extend .icon;
+    color: white;
+    cursor: default;
+    content: $x-icon;
+    background-color: $x-color;
+  }
+
+  &--o-set-marker:before {
+    @extend .icon;
+    color: white;
+    cursor: default;
+    content: $o-icon;
+    background-color: $o-color;
+  }
+
+  &--status {
+    position: absolute;
+    width: 100%;
+    font-family: sans-serif;
+    background: rgba(255, 255, 255, 0.8);
+    height: 100%;
+    left: 0;
+    color: $hover-color;
+    top: 0;
+    z-index: 2;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    &--msg {
+      font-size: 40px;
+      font-weight: 200;
+    }
+
+    &--restart {
+      background-color: $hover-color;
+      padding: 15px 40px;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  }
+
+}
